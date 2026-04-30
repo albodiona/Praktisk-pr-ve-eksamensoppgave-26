@@ -7,7 +7,7 @@
 script/source = "extends Node2D
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Build-A-Snowman/scenes/Build-It-Map.tscn\")
+	get_tree().change_scene_to_file(\"res://Build-A-Snowman/scenes/Build-It-1/Build-It-1.tscn\")
 "
 
 [node name="How-To-Play" type="Node2D" unique_id=759430208]
