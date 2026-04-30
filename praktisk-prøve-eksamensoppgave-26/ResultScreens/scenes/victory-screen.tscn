@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://do50v37mipttn" path="res://ResultScreens/scripts/result-function.gd" id="1_x5oxn"]
 [ext_resource type="Texture2D" uid="uid://dmu1txiqjt2j0" path="res://ResultScreens/assets/victory-background.png" id="2_6dk6y"]
 [ext_resource type="AudioStream" uid="uid://d3s37p0k2ch60" path="res://ResultScreens/assets/victory-chime-366449.mp3" id="3_iisfa"]
+[ext_resource type="Texture2D" uid="uid://c61he2bxsh6oo" path="res://ResultScreens/assets/lvl2.png" id="3_ijr7n"]
 
 [node name="victory-screen" type="Control" unique_id=915710589]
 layout_mode = 3
@@ -19,14 +20,22 @@ position = Vector2(959.5, 518.00006)
 scale = Vector2(1.2649739, 1.1992188)
 texture = ExtResource("2_6dk6y")
 
-[node name="Menu" type="Button" parent="." unique_id=1348406529]
+[node name="LVL2" type="Sprite2D" parent="." unique_id=860546530]
+light_mask = 5
+visibility_layer = 9
+position = Vector2(450, 1007)
+scale = Vector2(0.3999973, 0.4800046)
+texture = ExtResource("3_ijr7n")
+
+[node name="lvl" type="Button" parent="." unique_id=1348406529]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 246.00002
 offset_top = 935.0
 offset_right = 254.00002
 offset_bottom = 943.0
-scale = Vector2(50.252193, 15.497388)
+scale = Vector2(0.2521944, 0.1407501)
+icon = ExtResource("3_ijr7n")
 
 [node name="Redo" type="Button" parent="." unique_id=401007810]
 modulate = Color(1, 1, 1, 0)
@@ -50,6 +59,6 @@ scale = Vector2(48.019756, 20.718899)
 stream = ExtResource("3_iisfa")
 autoplay = true
 
-[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="lvl" to="." method="_on_lvl_pressed"]
 [connection signal="pressed" from="Redo" to="." method="_on_redo_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
