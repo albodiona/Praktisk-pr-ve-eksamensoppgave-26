@@ -7,6 +7,7 @@
 [node name="Venstre-Arm" type="Area2D" unique_id=642014730]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=522581828]
+position = Vector2(0, 6)
 texture = ExtResource("1_rdxb3")
 region_enabled = true
 region_rect = Rect2(908.3723, 618.54346, 145.40979, 122.79053)

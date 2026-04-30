@@ -7,6 +7,7 @@
 [node name="Høyre-Arm" type="Area2D" unique_id=642014730]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=522581828]
+position = Vector2(0, 7)
 texture = ExtResource("1_2mmeu")
 region_enabled = true
 region_rect = Rect2(1052.3259, 615.9959, 135.71582, 124.08307)

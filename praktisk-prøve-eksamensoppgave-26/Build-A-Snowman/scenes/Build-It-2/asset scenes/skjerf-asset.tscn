@@ -9,6 +9,7 @@ size = Vector2(34.09092, 31.818192)
 scale = Vector2(0.8800002, 0.8800002)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=89411597]
+position = Vector2(0, 21.590906)
 texture = ExtResource("1_7vwkt")
 region_enabled = true
 region_rect = Rect2(714.24493, 252.87634, 240.60028, 196.18176)
