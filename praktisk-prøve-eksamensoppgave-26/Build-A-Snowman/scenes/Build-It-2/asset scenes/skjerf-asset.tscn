@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bktc4djk413k3"]
+
+[ext_resource type="Texture2D" uid="uid://dcphyc8kcyhj0" path="res://Build-A-Snowman/assets/buildit2accessories.png" id="1_7vwkt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dndc5"]
+size = Vector2(34.09092, 31.818192)
+
+[node name="Area2D" type="Area2D" unique_id=1197956637]
+scale = Vector2(0.8800002, 0.8800002)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89411597]
+texture = ExtResource("1_7vwkt")
+region_enabled = true
+region_rect = Rect2(714.24493, 252.87634, 240.60028, 196.18176)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=135250526]
+position = Vector2(3, -0.9999995)
+scale = Vector2(5.2799983, 5.2799983)
+shape = SubResource("RectangleShape2D_dndc5")

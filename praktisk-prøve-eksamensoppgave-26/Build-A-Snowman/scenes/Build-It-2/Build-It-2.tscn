@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://drg5wmhm568o5"]
+
+[ext_resource type="Script" uid="uid://8hnjddn65qiw" path="res://Build-A-Snowman/scripts/timeout.gd" id="1_omajy"]
+[ext_resource type="Texture2D" uid="uid://c21a7qgr1ihah" path="res://Build-A-Snowman/assets/buildit2.png" id="2_omajy"]
+[ext_resource type="Script" uid="uid://2iwsmccq4l63" path="res://Build-A-Snowman/scripts/slot.gd" id="3_kosid"]
+[ext_resource type="PackedScene" uid="uid://cwfhbw1y7f4gx" path="res://Build-A-Snowman/scenes/Build-It-2/asset scenes/h-arm-asset.tscn" id="4_ds80i"]
+[ext_resource type="PackedScene" uid="uid://d06cls8u1rlwb" path="res://Build-A-Snowman/scenes/Build-It-2/asset scenes/lue-asset.tscn" id="5_poxm6"]
+[ext_resource type="Script" uid="uid://jq577c264mx" path="res://Build-A-Snowman/scripts/draggable.gd" id="5_tu3ls"]
+[ext_resource type="PackedScene" uid="uid://bitqjebi0hefh" path="res://Build-A-Snowman/scenes/Build-It-2/asset scenes/munn-asset.tscn" id="6_tu3ls"]
+[ext_resource type="PackedScene" uid="uid://bktc4djk413k3" path="res://Build-A-Snowman/scenes/Build-It-2/asset scenes/skjerf-asset.tscn" id="7_pfyyw"]
+[ext_resource type="PackedScene" uid="uid://doyr5hcmq56mf" path="res://Build-A-Snowman/scenes/Build-It-2/asset scenes/v-arm-asset.tscn" id="8_wcc5f"]
+[ext_resource type="AudioStream" uid="uid://c0d3ljb43mppy" path="res://Build-A-Snowman/assets/christmas-background-music-434626.mp3" id="9_jv52m"]
+[ext_resource type="Script" uid="uid://bopee568w26pp" path="res://Build-A-Snowman/scripts/music_button.gd" id="10_gij6w"]
+[ext_resource type="Texture2D" uid="uid://c5e5a0lcv3py4" path="res://Build-A-Snowman/assets/Volume-UI.png" id="11_6tq3w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8jopi"]
+radius = 12.958758
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc5sn"]
+atlas = ExtResource("11_6tq3w")
+region = Rect2(760.06287, 260.48102, 675.67834, 520.8974)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfoy2"]
+atlas = ExtResource("11_6tq3w")
+region = Rect2(106.212585, 263.45758, 632.0222, 509.98334)
+
+[node name="BuildIt-1" type="Node2D" unique_id=765135795]
+position = Vector2(-5, 10)
+script = ExtResource("1_omajy")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1849510151]
+position = Vector2(961, 533)
+scale = Vector2(1.2488765, 1.1621094)
+texture = ExtResource("2_omajy")
+
+[node name="Slots" type="Node2D" parent="." unique_id=1077046374]
+
+[node name="Head - Slot" type="Area2D" parent="Slots" unique_id=585364120]
+position = Vector2(966, 334.00003)
+rotation = -3.1415925
+scale = Vector2(12.485773, -9.008703)
+script = ExtResource("3_kosid")
+slot_id = "head"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/Head - Slot" unique_id=2139301507]
+position = Vector2(0.59156895, -16.046463)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Munn - Slot" type="Area2D" parent="Slots" unique_id=886046049]
+position = Vector2(964, 457.99997)
+rotation = -3.1415925
+scale = Vector2(8.70284, -4.226632)
+script = ExtResource("3_kosid")
+slot_id = "munn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/Munn - Slot" unique_id=1353495793]
+position = Vector2(0.675324, -14.754093)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Skjerf - Slot" type="Area2D" parent="Slots" unique_id=1944918313]
+position = Vector2(967, 548.99994)
+rotation = -3.1415925
+scale = Vector2(8.67255, -3.585557)
+script = ExtResource("3_kosid")
+slot_id = "body"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/Skjerf - Slot" unique_id=1615215764]
+position = Vector2(0.59156877, -14.593546)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Right-Arm - Slot" type="Area2D" parent="Slots" unique_id=938258865]
+position = Vector2(1138.9999, 573)
+rotation = -3.1415925
+scale = Vector2(7.0145583, -4.425049)
+script = ExtResource("3_kosid")
+slot_id = "right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/Right-Arm - Slot" unique_id=748416459]
+position = Vector2(0.59156877, -14.593546)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Left-Arm - Slot" type="Area2D" parent="Slots" unique_id=1451554149]
+position = Vector2(797, 574)
+rotation = -3.1415925
+scale = Vector2(7.022472, -4.425048)
+script = ExtResource("3_kosid")
+slot_id = "left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slots/Left-Arm - Slot" unique_id=2045237990]
+position = Vector2(0.59156877, -14.593546)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Draggables" type="Node2D" parent="." unique_id=2065340283]
+
+[node name="Høyre-Arm" parent="Draggables" unique_id=642014730 instance=ExtResource("4_ds80i")]
+position = Vector2(1718, 428)
+script = ExtResource("5_tu3ls")
+correct_slot = "right"
+
+[node name="Lue" parent="Draggables" unique_id=280583636 instance=ExtResource("5_poxm6")]
+position = Vector2(1641, 664)
+script = ExtResource("5_tu3ls")
+correct_slot = "head"
+
+[node name="Munn" parent="Draggables" unique_id=1197956637 instance=ExtResource("6_tu3ls")]
+position = Vector2(1524, 189)
+script = ExtResource("5_tu3ls")
+correct_slot = "munn"
+
+[node name="Skjerf" parent="Draggables" unique_id=258888336 instance=ExtResource("7_pfyyw")]
+position = Vector2(1368, 428)
+script = ExtResource("5_tu3ls")
+correct_slot = "body"
+
+[node name="Venstre-Arm" parent="Draggables" unique_id=795314186 instance=ExtResource("8_wcc5f")]
+position = Vector2(1415, 818)
+script = ExtResource("5_tu3ls")
+correct_slot = "left"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1901838370]
+stream = ExtResource("9_jv52m")
+autoplay = true
+
+[node name="timer" type="Timer" parent="." unique_id=1589414899]
+wait_time = 4096.0
+one_shot = true
+autostart = true
+
+[node name="MusicButton" type="TextureButton" parent="." unique_id=202907186]
+offset_left = 19.000006
+offset_top = 11.999985
+offset_right = 664.0
+offset_bottom = 589.0
+scale = Vector2(0.17800085, 0.16814372)
+toggle_mode = true
+script = ExtResource("10_gij6w")
+atlas_on = SubResource("AtlasTexture_wc5sn")
+atlas_off = SubResource("AtlasTexture_kfoy2")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="Slots/Head - Slot" to="Slots/Head - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Slots/Head - Slot" to="Slots/Head - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Slots/Munn - Slot" to="Slots/Munn - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Slots/Munn - Slot" to="Slots/Munn - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Slots/Skjerf - Slot" to="Slots/Skjerf - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Slots/Skjerf - Slot" to="Slots/Skjerf - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Slots/Right-Arm - Slot" to="Slots/Right-Arm - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Slots/Right-Arm - Slot" to="Slots/Right-Arm - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Slots/Left-Arm - Slot" to="Slots/Left-Arm - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Slots/Left-Arm - Slot" to="Slots/Left-Arm - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Draggables/Høyre-Arm" to="Draggables/Høyre-Arm" method="_on_area_entered"]
+[connection signal="area_exited" from="Draggables/Høyre-Arm" to="Draggables/Høyre-Arm" method="_on_area_exited"]
+[connection signal="area_entered" from="Draggables/Lue" to="Draggables/Lue" method="_on_area_entered"]
+[connection signal="area_exited" from="Draggables/Lue" to="Draggables/Lue" method="_on_area_exited"]
+[connection signal="area_entered" from="Draggables/Munn" to="Draggables/Munn" method="_on_area_entered"]
+[connection signal="area_exited" from="Draggables/Munn" to="Draggables/Munn" method="_on_area_exited"]
+[connection signal="area_entered" from="Draggables/Skjerf" to="Draggables/Skjerf" method="_on_area_entered"]
+[connection signal="area_exited" from="Draggables/Skjerf" to="Draggables/Skjerf" method="_on_area_exited"]
+[connection signal="area_entered" from="Draggables/Venstre-Arm" to="Draggables/Venstre-Arm" method="_on_area_entered"]
+[connection signal="area_exited" from="Draggables/Venstre-Arm" to="Draggables/Venstre-Arm" method="_on_area_exited"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="MusicButton" to="Slots/Head - Slot" method="_on_music_button_pressed"]
+[connection signal="toggled" from="MusicButton" to="MusicButton" method="_on_toggled"]
